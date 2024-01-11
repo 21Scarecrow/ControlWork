@@ -32,7 +32,8 @@ void PrintArray(string[] arr)
 
 int SearchingSizeNewArray(string[] arr)
 {
-    for (int i = 0, count = 0; i < arr.Length; i++)
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i].Length <= 3)
             count++;
@@ -53,3 +54,13 @@ string[] ArraySorting(string[] arr, int size)
     }
     return result;
 }
+
+Console.WriteLine("Введите размер массива");
+int size = int.Parse(Console.ReadLine());
+
+string[] userArray = EnteringArray(size);
+PrintArray(userArray);
+
+int newSize = SearchingSizeNewArray(userArray);
+string[] result = ArraySorting(userArray, newSize);
+PrintArray(result);
