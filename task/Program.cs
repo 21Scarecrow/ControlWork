@@ -39,3 +39,17 @@ int SearchingSizeNewArray(string[] arr)
     }
     return count;
 }
+
+string[] ArraySorting(string[] arr, int size)
+{
+    string[] result = new string[size];
+    for (int i = 0, count = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            result[count] = arr[i];
+            count++;
+        }
+    }
+    return result;
+}
