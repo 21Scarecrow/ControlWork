@@ -9,3 +9,17 @@
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 [“Russia”, “Denmark”, “Kazan”] → [] */
 
+Console.Clear();
+
+string[] EnteringArray(int size)
+{
+    string[] arr = new string[size];
+
+    Console.WriteLine("Введите элементы массива");
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write("{0}>", i + 1);
+        arr[i] = Console.ReadLine();
+    }
+    return arr;
+}
