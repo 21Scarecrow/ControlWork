@@ -23,8 +23,19 @@ string[] EnteringArray(int size)
     }
     return arr;
 }
+
 void PrintArray(string[] arr)
 {
     Console.Write("\nМассив: ");
     Console.WriteLine("[" + string.Join(", ", arr) + "]");
+}
+
+int SearchingSizeNewArray(string[] arr)
+{
+    for (int i = 0, count = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+            count++;
+    }
+    return count;
 }
