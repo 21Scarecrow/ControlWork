@@ -23,3 +23,8 @@ string[] EnteringArray(int size)
     }
     return arr;
 }
+void PrintArray(string[] arr)
+{
+    Console.Write("\nМассив: ");
+    Console.WriteLine("[" + string.Join(", ", arr) + "]");
+}
